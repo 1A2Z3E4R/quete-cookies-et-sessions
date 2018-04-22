@@ -49,11 +49,21 @@ if (isset($_SESSION["list"])) {
                             Cart <?php echo $panier_count; ?>
                         </a>
                     </li>
-                    <li>
-                        <a href="/logout.php" class="btn btn-warning navbar-btn">
+                    <?php
+                    if (isset($_SESSION['loginname'])) {
+                        echo "<li>
+                        <a href=\"/logout.php\" class=\"btn btn-warning navbar-btn\">
                             Logout
                         </a>
-                    </li>
+                    </li>";
+                    } elseif (!isset($_SESSION['loginname'])) {
+                        echo "<li>
+                        <a href=\"/login.php\" class=\"btn btn-warning navbar-btn\">
+                            Login
+                        </a>
+                    </li>";
+                    }
+                    ?>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

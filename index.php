@@ -7,10 +7,6 @@ if (isset($_GET["add_to_cart"])) {
     }
     array_push($_SESSION["list"], $_GET["add_to_cart"]);
 }
-
-if (!isset($_SESSION['loginname'])) {
-    header('Location: login.php');
-}
 ?>
 <?php require 'inc/head.php'; ?>
 <section class="cookies container-fluid">

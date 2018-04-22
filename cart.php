@@ -26,7 +26,6 @@ if (!isset($_SESSION['loginname'])) {
             $cookie3 = [];
             $cookie4 = [];
             foreach ($_SESSION["list"] as $value){
-                //echo $value . "<br>";
                 switch ($value) {
                     case '46':
                         $cookie1[] = $value ;
